@@ -1,6 +1,7 @@
 package com.care.anot_test;
 
 import org.springframework.beans.BeansException;
+
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 import org.springframework.stereotype.Component;
@@ -11,7 +12,9 @@ public class App implements ApplicationContextAware {	//template의 부모 객�
 	
 	@Override
 	public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
-		ac = applicationContext;
+		System.out.println("ac 실행");
+		this.ac = applicationContext;
+		System.out.println("acac : "+ac);
 	}
 
 }
